@@ -1,5 +1,5 @@
 window.onload = function(){
 
- console.log("HI");
+ var a = "B";
 
 }
