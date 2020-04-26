@@ -1,7 +1,5 @@
 window.onload = function(){
 
-var b = document.getElementsByTagName("BODY");
-b[0].style.background = "rgb(0, 0, 0)";
-console.log("Started");
+ document.getElementById("hplogo").src = "https://fontmeme.com/permalink/200427/298519910d814dcbb5797db5b17c4289.png";
 
 }
