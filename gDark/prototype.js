@@ -8,5 +8,5 @@ window.onload = function(){
  img.style.width = "200px";
  img.style.height = "200px";
  document.body.appendChild(img);
-
+ console.log("HI");
 }
