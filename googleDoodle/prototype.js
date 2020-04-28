@@ -19,7 +19,7 @@ function snowfall(){
      var newSnowflake = document.createElement("div");
      newSnowflake.className = "randoSnowflake";
      newSnowflake.style.position = "absolute";
-     newSnowflake.style.top = Math.floor(Math.random() * screen.height);
+     newSnowflake.style.top = Math.floor(Math.random() * screen.height).toString() + "px";
      newSnowflake.style.left = "10px";
      newSnowflake.style.width = "10px";
      newSnowflake.style.height = "10px";
