@@ -1,5 +1,5 @@
 var mainExec;
-var block;
+var block = 0;
 
 function mainInjection(){
 
