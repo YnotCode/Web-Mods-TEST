@@ -30,6 +30,7 @@ function snowfall(){
         var x = parseInt(movingFlakes[i].style.left.replace("px", "")) + 10;
         if (x > screen.width){
           movingFlakes[i].remove();
+          console.log("too far");
         }
         else{
           var y = parseInt(movingFlakes[i].style.top.replace("px", ""));
