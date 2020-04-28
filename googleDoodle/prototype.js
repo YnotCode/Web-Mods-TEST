@@ -47,7 +47,7 @@ function snowfall(){
          newSnowflake.multiplier = Math.random() * 10;
          newSnowflake.style.position = "absolute";
          newSnowflake.style.top = Math.floor(Math.random() * (screen.height - 300)).toString() + "px";
-         newSnowflake.style.left = "10px";
+         newSnowflake.style.left = Math.floor(Math.random() * 30).toString() + "px";
          newSnowflake.style.width = "10px";
          newSnowflake.style.height = "10px";
          newSnowflake.style.backgroundColor = "white";
