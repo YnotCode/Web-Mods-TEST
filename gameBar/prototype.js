@@ -13,6 +13,7 @@ function mainInjection(){
     block.style.top = "10px";
     block.style.left = "10px";
     document.body.appendChild(block);
+    document.body.style.backgroundColor = "black";
   }
   else{
     window.clearInterval(mainExec);
