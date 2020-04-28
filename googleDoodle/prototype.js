@@ -24,9 +24,9 @@ function snowfall(){
   
   
    for (var i = 0; i < movingFlakes.length; i++){
-
-     var x = movingFlakes[i].style.left + 10;
-     var y = movingFlakes[i].style.top;
+ 
+     var x = parseInt(movingFlakes[i].style.left.replace("px", "")) + 10;
+     var y = parseInt(movingFlakes[i].style.top.replace("px", ""));
      movingFlakes[i].style.top = (getY(movingFlakes[i].multiplier, x) + y).toString() + "px";
      movingFlakes[i].style.left = (x + 10).toString() + "px";
      
@@ -45,9 +45,10 @@ function snowfall(){
      document.body.appendChild(newSnowflake);
      movingFlakes.push(newSnowflake);
    }
+ 
    
 }
 
 
-snowfall();
-//setInterval(snowfall, 17)
+
+setInterval(snowfall, 17)
