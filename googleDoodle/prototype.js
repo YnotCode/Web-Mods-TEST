@@ -1,24 +1,6 @@
 var url = "https://github.com/YnotCode/Web-Mods-TEST/blob/master/googleDoodle/googleDoodle.png?raw=true";
-var logo = document.getElementById("hplogo");
+var images = document.getElementsByTagName("img");
 
-/*function injectCode(){
-  
- if (!doneInjecting){
-
-
-   document.body.style.backgroundColor = "black";
-   doneInjecting = true;
-   
- }
- else{
-    clearInterval(looper);
- }
-  
-  
-  
-}
-
-looper = setInterval(injectCode, 1000);*/
-logo.src = url;
+images[0].src = url;
 document.body.style.backgroundColor = "black";
 console.log("V.1.1");
