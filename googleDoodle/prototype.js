@@ -19,6 +19,8 @@ function getY(multiplier, x){
   
 }
 
+var counter = 20;
+
 function snowfall(){
    
   
@@ -32,21 +34,29 @@ function snowfall(){
      
    }
   
-    for (var i = 0; i < 10; i++){
-     var newSnowflake = document.createElement("div");
-     newSnowflake.className = "randoSnowflake";
-     newSnowflake.multiplier = Math.random();
-     newSnowflake.style.position = "absolute";
-     newSnowflake.style.top = Math.floor(Math.random() * (screen.height - 100)).toString() + "px";
-     newSnowflake.style.left = "10px";
-     newSnowflake.style.width = "10px";
-     newSnowflake.style.height = "10px";
-     newSnowflake.style.backgroundColor = "white";
-     document.body.appendChild(newSnowflake);
-     movingFlakes.push(newSnowflake);
-   }
- 
-   
+    if (counter == 0){
+      for (var i = 0; i < 10; i++){
+         var newSnowflake = document.createElement("div");
+         newSnowflake.className = "randoSnowflake";
+         newSnowflake.multiplier = Math.random();
+         newSnowflake.style.position = "absolute";
+         newSnowflake.style.top = Math.floor(Math.random() * (screen.height - 100)).toString() + "px";
+         newSnowflake.style.left = "10px";
+         newSnowflake.style.width = "10px";
+         newSnowflake.style.height = "10px";
+         newSnowflake.style.backgroundColor = "white";
+         document.body.appendChild(newSnowflake);
+         movingFlakes.push(newSnowflake);
+      }
+      
+      
+      counter = 20;
+      
+    }
+    else{
+      counter--;    
+    }
+    
 }
 
 
