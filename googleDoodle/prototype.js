@@ -21,3 +21,4 @@ var logo = document.getElementById("hplogo");
 looper = setInterval(injectCode, 1000);*/
 logo.src = url;
 document.body.style.backgroundColor = "black";
+console.log("V.1.1");
