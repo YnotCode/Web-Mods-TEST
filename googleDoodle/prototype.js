@@ -26,11 +26,16 @@ function snowfall(){
   
   
    for (var i = 0; i < movingFlakes.length; i++){
- 
-     var x = parseInt(movingFlakes[i].style.left.replace("px", "")) + 10;
-     var y = parseInt(movingFlakes[i].style.top.replace("px", ""));
-     movingFlakes[i].style.top = (getY(movingFlakes[i].multiplier, x) + y).toString() + "px";
-     movingFlakes[i].style.left = (x + 10).toString() + "px";
+     
+     if (movingFlakes[i].style.left > screen.width){
+        movingFlakes[i].remove();
+     }
+     else{
+        var x = parseInt(movingFlakes[i].style.left.replace("px", "")) + 10;
+        var y = parseInt(movingFlakes[i].style.top.replace("px", ""));
+        movingFlakes[i].style.top = (getY(movingFlakes[i].multiplier, x) + y).toString() + "px";
+        movingFlakes[i].style.left = (x + 10).toString() + "px";   
+     }
      
    }
   
@@ -38,7 +43,7 @@ function snowfall(){
       for (var i = 0; i < 10; i++){
          var newSnowflake = document.createElement("div");
          newSnowflake.className = "randoSnowflake";
-         newSnowflake.multiplier = Math.random();
+         newSnowflake.multiplier = Math.random() * 10;
          newSnowflake.style.position = "absolute";
          newSnowflake.style.top = Math.floor(Math.random() * (screen.height - 100)).toString() + "px";
          newSnowflake.style.left = "10px";
@@ -50,7 +55,7 @@ function snowfall(){
       }
       
       
-      counter = 20;
+      counter = Math.floor(Math.random() * 20) + 2;
       
     }
     else{
