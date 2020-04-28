@@ -28,7 +28,7 @@ function snowfall(){
    for (var i = 0; i < movingFlakes.length; i++){
      
         var x = parseInt(movingFlakes[i].style.left.replace("px", "")) + 10;
-        if (x - 10> screen.width - 40){
+        if (x - 10> screen.width - 200){
           movingFlakes[i].remove();
           console.log("too far");
         }
@@ -46,7 +46,7 @@ function snowfall(){
          newSnowflake.className = "randoSnowflake";
          newSnowflake.multiplier = Math.random() * 10;
          newSnowflake.style.position = "absolute";
-         newSnowflake.style.top = Math.floor(Math.random() * (screen.height - 200)).toString() + "px";
+         newSnowflake.style.top = Math.floor(Math.random() * (screen.height - 500)).toString() + "px";
          newSnowflake.style.left = "10px";
          newSnowflake.style.width = "10px";
          newSnowflake.style.height = "10px";
