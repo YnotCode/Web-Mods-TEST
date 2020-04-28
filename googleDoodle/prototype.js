@@ -27,15 +27,15 @@ function snowfall(){
   
    for (var i = 0; i < movingFlakes.length; i++){
      
-     if (movingFlakes[i].style.left > screen.width){
-        movingFlakes[i].remove();
-     }
-     else{
         var x = parseInt(movingFlakes[i].style.left.replace("px", "")) + 10;
-        var y = parseInt(movingFlakes[i].style.top.replace("px", ""));
-        movingFlakes[i].style.top = (getY(movingFlakes[i].multiplier, x) + y).toString() + "px";
-        movingFlakes[i].style.left = (x + 10).toString() + "px";   
-     }
+        if (x > screen.width){
+          movingFlakes[i].remove();
+        }
+        else{
+          var y = parseInt(movingFlakes[i].style.top.replace("px", ""));
+          movingFlakes[i].style.top = (getY(movingFlakes[i].multiplier, x) + y).toString() + "px";
+          movingFlakes[i].style.left = (x + 10).toString() + "px";    
+        }
      
    }
   
