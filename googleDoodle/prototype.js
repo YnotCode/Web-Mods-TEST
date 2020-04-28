@@ -17,7 +17,12 @@ function snowfall(){
    
    for (var i = 0; i < 10; i++){
      var newSnowflake = document.createElement("div");
-     newSnowflake.class = "snowflake";
+     newSnowflake.style.position = "absolute";
+     newSnowflake.style.top = Math.floor(Math.random() * screen.height);
+     newSnowflake.style.left = "10px";
+     newSnowflake.style.width = "10px";
+     newSnowflake.style.height = "10px";
+     newSnowflake.style.backgroundColor = "white";
      document.body.appendChild(newSnowflake);
    }
    
