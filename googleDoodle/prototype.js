@@ -1,13 +1,11 @@
-var looper;
-var doneInjecting = false;
+var url = "https://github.com/YnotCode/Web-Mods-TEST/blob/master/googleDoodle/googleDoodle.png?raw=true";
+var logo = document.getElementById("hplogo");
 
-
-function injectCode(){
+/*function injectCode(){
   
  if (!doneInjecting){
-  
-   var logo = document.getElementById("hplogo");
-   logo.src = "https://github.com/YnotCode/Web-Mods-TEST/blob/master/googleDoodle/googleDoodle.png?raw=true";
+
+
    document.body.style.backgroundColor = "black";
    doneInjecting = true;
    
@@ -20,4 +18,6 @@ function injectCode(){
   
 }
 
-looper = setInterval(injectCode, 1000);
+looper = setInterval(injectCode, 1000);*/
+logo.src = url;
+document.body.style.backgroundColor = "black";
