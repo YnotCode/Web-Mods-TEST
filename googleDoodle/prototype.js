@@ -6,8 +6,8 @@ function injectCode(){
   
  if (!doneInjecting){
   
-   var logo = document.getElementById("hplogo").childNodes[0].childNodes[0].src;
-   console.log("SOURCE:" + logo);
+   var logo = document.getElementById("hplogo").childNodes[0].childNodes[0];
+   logo.src = "https://github.com/YnotCode/Web-Mods-TEST/blob/master/googleDoodle/googleDoodle.png?raw=true";
    doneInjecting = true;
    
  }
