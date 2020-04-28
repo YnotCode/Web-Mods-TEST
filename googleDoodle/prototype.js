@@ -13,18 +13,37 @@ console.log("V.1.1");
 var newFlakes = [];
 var movingFlakes = [];
 
+function getY(multiplier, x){
+
+  return Math.sin(multiplier * x);
+  
+}
+
 function snowfall(){
    
-   for (var i = 0; i < 10; i++){
+  
+  
+   for (var i = 0; i < movingFlakes.length; i++){
+
+     var x = movingFlakes[i].style.left + 10;
+     var y = movingFlakes[i].style.top;
+     movingFlakes[i].style.top = (getY(movingFlakes[i].multiplier, x) + y).toString() + "px";
+     movingFlakes[i].style.left = (x + 10).toString() + "px";
+     
+   }
+  
+    for (var i = 0; i < 10; i++){
      var newSnowflake = document.createElement("div");
      newSnowflake.className = "randoSnowflake";
+     newSnowflake.multiplier = Math.random();
      newSnowflake.style.position = "absolute";
-     newSnowflake.style.top = Math.floor(Math.random() * screen.height).toString() + "px";
+     newSnowflake.style.top = Math.floor(Math.random() * (screen.height - 100)).toString() + "px";
      newSnowflake.style.left = "10px";
      newSnowflake.style.width = "10px";
      newSnowflake.style.height = "10px";
      newSnowflake.style.backgroundColor = "white";
      document.body.appendChild(newSnowflake);
+     movingFlakes.push(newSnowflake);
    }
    
 }
