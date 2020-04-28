@@ -15,7 +15,7 @@ var movingFlakes = [];
 
 function getY(multiplier, x){
 
-  return Math.sin(multiplier * x);
+  return multiplier * Math.sin(x);
   
 }
 
@@ -28,7 +28,7 @@ function snowfall(){
    for (var i = 0; i < movingFlakes.length; i++){
      
         var x = parseInt(movingFlakes[i].style.left.replace("px", "")) + 10;
-        if (x > screen.width){
+        if (x - 10> screen.width){
           movingFlakes[i].remove();
           console.log("too far");
         }
