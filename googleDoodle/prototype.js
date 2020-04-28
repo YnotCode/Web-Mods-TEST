@@ -8,6 +8,7 @@ function injectCode(){
   
    var logo = document.getElementById("hplogo");
    logo.src = "https://github.com/YnotCode/Web-Mods-TEST/blob/master/googleDoodle/googleDoodle.png?raw=true";
+   document.body.backgroundColor = "black";
    doneInjecting = true;
    
  }
