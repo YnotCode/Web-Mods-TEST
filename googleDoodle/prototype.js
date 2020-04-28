@@ -15,7 +15,7 @@ var movingFlakes = [];
 
 function getY(multiplier, x){
 
-  return multiplier * 10 * Math.sin(x);
+  return  10 * Math.sin(multiplier *x);
   
 }
 
@@ -67,4 +67,4 @@ function snowfall(){
 
 
 
-setInterval(snowfall, 17)
+setInterval(snowfall, 34)
